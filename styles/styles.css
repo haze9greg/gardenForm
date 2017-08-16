@@ -1,0 +1,446 @@
+/******************************************
+    CSSS RESET + Footer Fix
+*******************************************/
+
+
+/*Linked to CSS reset and a footer fix to minimize the code*/
+
+@import url("cssReset.css");
+@import url("footer.css");
+
+/*********************
+    HEADER/FOOTER
+*********************/
+#header{
+	height:100px;
+	background:linear-gradient(rgba(64, 195, 53, 0.35),rgba(34, 114, 27, 0.8))
+}
+
+#subHeader{
+	height:25px;
+	background:white;
+	box-shadow: 0 5px 10px -5px black;
+}
+
+h1{
+	font-size:80px;
+	color:white;
+	font-family: chicle;
+	margin-left:50px;
+	padding-top:10px;
+	/*little animation on the header*/
+	-webkit-animation:h1 2s 1  ease-out;
+}
+
+h2{
+	padding:2px 0 0 50px;
+	font-family: mate;
+	font-weight: bold;
+	font-size:20px;
+	-webkit-animation:h2 3s 1  ease-out;
+}
+
+nav{
+	float:right;
+	display:flex;
+	justify-content: flex-end;
+	padding-right:50px;	
+}
+
+li{	
+	display:block;
+	cursor: pointer;
+	list-style-type:none;		
+	text-decoration: none;
+	font-family: mate;
+	font-weight: bold;
+	height:25px;	
+}
+
+a{
+	color:#096d00;
+	display:block;
+	padding:3px 10px;
+}
+
+/* subtle lower border hover state*/
+a:hover{
+	color:#11d800;
+	text-decoration: none;
+	border-bottom:3px solid #11d800;
+	transition:100ms;
+}
+
+#footer{
+	margin-top:100px;
+	background:rgba(0, 145, 0, 0.53);
+	height:30px;
+}
+
+#footer p{
+	padding:5px;
+	font-family:mate;
+	font-size:20px;
+	float:right;
+	color:white;
+}
+
+/********************
+    KEYFRAMES
+*********************/
+@keyframes h1{
+	0%{
+		opacity: 0;
+		margin-left:20%;		
+	}
+	70%{
+		opacity: .5;
+	}
+	100%{
+		margin-left:50px;
+		opacity: 1;
+	}
+}
+
+@keyframes h2{
+	0%{
+		opacity: 0;
+		padding-left:30%;		
+	}
+	20%{
+		opacity: 0;
+	}
+	70%{
+		opacity: .5;
+	}
+	100%{
+		padding-left:50px;
+		opacity: 1;
+	}
+}
+
+/********************
+    CONTENT
+*********************/
+
+body {
+	/*background image from morguefile.com*/
+	background-image: url(../images/greenleaf2-crop.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 100%;
+	min-width:300px;
+}
+
+#blurb{
+	display:block;
+	width:80%;
+	margin:40px auto 0;
+	color:white;
+	text-align: center;
+	font-family: mate;
+	font-size:1.5em;
+	text-shadow: 0 1px 5px black;
+}
+
+#wholeForm {	
+	margin:50px auto;
+	max-width: 500px;
+	background: rgba(80, 163, 157, 0.75);
+	box-shadow: 0 5px 10px -2px black;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+/*dividers for each chunk of the form*/
+hr{
+	width:90%
+}
+
+/**********************
+    LABELS/INPUTS
+**********************/
+
+/*set all elements inside the formbox to be relative to it*/
+.formbox{
+	position:relative;
+	margin-bottom:20px;
+}
+
+label,
+input,
+select,
+option,
+span{
+	margin: 5px 0 0 0;
+	font-family: mate;
+	font-weight:bold;
+	font-size:20px;
+	width: 220px;
+	padding:3px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border:none;
+	transition:300ms;	
+	border:1px solid transparent;
+}
+
+.labels{
+	font-family: chicle;
+	width:200px;
+	
+}
+
+.options{
+    height:20px
+}
+
+/*focus state gives the inputs a nice green look*/
+input:focus, select:focus{
+	background:#acffac;
+	width:230px;
+	transition:300ms;		
+	border:1px solid #009500;
+}
+
+input[type="radio"], input[type="checkbox"]{
+	width:30px;
+	margin-right:5px;
+	display:inline-block;
+}
+
+.chunks{
+margin:20px 0;
+}
+
+#sexy, #stalk{
+	height:40px;
+}
+
+input{
+	font-size:18px;
+}
+
+#radio{
+	margin-bottom:20px;
+}
+
+
+
+/**********************
+    SUBMIT
+**********************/
+
+input[type=submit]{
+	display:block;
+	border-radius:20px;
+	background:#096d00;
+	color:white;
+	width:90px;
+	height:40px;
+	font-size:18px;
+	margin:15px auto 0;
+}
+
+/*widen the submit button during hover*/
+input[type=submit]:hover{
+	width:110px;
+	box-shadow: 0 0 10px 2px white;
+	transition:200ms;
+}
+
+/*pretty light green active state*/
+input[type=submit]:active{
+	transition:50ms;
+	box-shadow:0 0 20px 5px #11d800 inset, 0 0 10px white;
+	border:none;
+}
+
+/**********************
+    MESSAGE
+**********************/
+/*negative message appears below the input field*/
+.message{
+	position:absolute;	
+	left:45%;	
+	color:#720000;
+	font-family:  Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:14px;	
+	display:none;
+	font-weight: bold;
+}
+
+/*positive message appears beside the input. hapy and green*/
+.message2{
+	position:absolute;	
+	top:0;
+	left:95%;
+	margin-left:10px;
+	background-color:transparent;
+	font-size:10px;
+	font-family:"kingthings_calligraphica_2Rg", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:30px;	
+	color:#00ff00;
+	display:none;
+}
+
+#checkMessage{
+	top:100px;
+	left:5%;
+}
+
+
+/*******************
+    Media Queries
+*******************/
+
+@media screen and (max-width:960px) {
+	#wholeForm {
+		width:90%;
+	}
+	
+	label{
+		margin-top:20px;
+		margin-bottom:-10px;
+		font-size:18px;
+	}
+	
+input,
+select,
+option,
+	span{
+	font-size:16px;
+	}
+
+	
+	/*grow checkbox and radio buttons*/
+	.options{
+		width:40px;
+	}
+	
+	#header{
+		height:50px;
+	}
+	
+	h1{
+		margin-top:-10px;
+		font-size:40px;
+		margin-left:10px;
+	}
+	
+	nav{
+		padding-right:10px;
+	}
+	
+	h2{
+		padding-left:10px;
+		font-size:16px;
+		animation:none;
+	}
+	
+	#blurb{
+		font-size:16px;
+	}
+	
+	#wholeform{
+		padding:5px;	
+	}
+	
+	.chunks{
+		padding:5px 0;
+	}
+	
+	.chunks:first-child{
+		margin-top:-10px;
+	}
+	
+	.formbox{
+		margin-bottom:5px;	
+	}
+	
+	.message2{
+		left:92%;
+		top:18px;
+	}
+	
+	#checkbox{
+		margin-top:20px;
+	}
+	
+	#footer{
+	height:50px;
+}
+
+#footer p{	
+	font-size:16px;
+}
+
+@keyframes h1{
+	0%{
+		opacity: 0;
+		margin-left:20%;		
+	}
+	70%{
+		opacity: .5;
+	}
+	100%{
+		margin-left:10px;
+		opacity: 1;
+	}
+}
+
+	
+	
+	/*centre items on the mobile screen*/
+	@media screen and (max-width:640px) {
+		.message{
+		left:8%;
+		top:80px;
+	}
+		#checkMessage{
+			margin-top:24px;
+		}
+		
+		.message2{
+			left:70%;
+			top:12px;
+		}
+		
+		.labels{
+			width:100%;
+		}
+		
+		#checkMessage{
+	top:80px;
+	}
+		
+		label{
+			text-align: center;
+		}
+		
+/*		centres the input and select boxes*/
+		input, select{
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			border-radius:5px;
+			text-align: center;
+			width:85%;
+		}
+		
+		/*grow the input box*/
+		.inputs:focus{
+			transform:scale(1.6);
+			width:280px;
+			transition:500ms;			
+		}
+		
+		#gender, #checkbox{
+			text-align: left;
+			margin-bottom:10px;
+		}
+		
+		.drops:focus{
+			width:95%;
+		}
+	}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form Design</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<h1>Garden Life</h1>
+		</div>
+		<!--stylized seperate subheader-->
+		<div id="subHeader">
+			<nav>
+				<!--<li><a href="#">Home</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Login/Sign Up</a></li>-->
+			</nav>
+			<h2>Sign Up</h2>
+
+		</div>
+
+<!--description of this page-->
+		<div id="content">
+			<p id="blurb">Sign up for our tri-daily newsletter to get all the latest info on our lovely green products that look pretty, and make you feel fantastic!</p>
+
+			<!--formbox class to target all the groups of labels and inputs-->
+			<form id="mainForm" method="get">
+				<div id="wholeForm">
+
+					<section class="chunks">
+						<div class="formbox">
+							<label for="firstname" class="labels">Name</label>
+							<!--each input has a placeholder. somewhat bat themed...-->
+							<input type="text" name="firstname" id="firstName" placeholder="Bruce Wayne" class="inputs">
+							<div class="message"></div>
+							<!--message 2 is just a simple checkmark-->
+							<div class="message2">&#x2714;</div>
+						</div>
+
+						<!--<div class="formbox">
+							<label for="lastname" class="labels">Last Name</label>
+							<input type="text" name="lastname" id="lastName" placeholder="Wayne">
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>-->
+					</section>
+					<hr>
+
+					<section class="chunks">
+						<div class="formbox">
+							<label for="email" class="labels">E-mail</label>
+							<input type="email" name="email" id="email" placeholder="batdude@hotmail.com" class="inputs">
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+
+						<div class="formbox">
+							<label for="phone" class="labels">Phone Number</label>
+							<input type="tel" name="phone" id="phone" placeholder="5551234567" maxlength="10" class="inputs">
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+					</section>
+					<hr>
+
+					<section class="chunks">
+						<div class="formbox">
+							<label for="address1" class="labels">Street Address</label>
+							<input type="text" name="address1" id="address1" placeholder="123 Fake Street" class="inputs">
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+						
+						<div class="formbox">
+							<label for="address2" class="labels">Street Address 2 *</label>
+							<input type="text" name="address2" id="address2" placeholder="456 Madeup Avenue" class="inputs">
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+						
+						<div class="formbox">
+							<label for="city" class="labels">City</label>
+							<input type="text" name="city" id="city" placeholder="Gotham" class="inputs">
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+
+						<div class="formbox">
+							<label for="postalcode" class="labels">Postal/Zip Code</label>
+							<!--maxlength restricts the user from entering too many characters-->
+							<input type="text" name="postal" id="postal" placeholder="Select country first" maxlength="6" class="inputs">
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+
+						<div class="formbox">
+							<label for="cDrop" class="labels">Country</label>
+							<select name="cDrop" id="cDrop" class="drops">
+								<option value="X">Country...</option>
+								<option value="AU">Australia</option>
+								<option value="FN">Belgium</option>
+								<option value="CA">Canada</option>
+								<option value="CH">China</option>
+								<option value="FN">Finland</option>
+								<option value="MX">Mexico</option>
+								<option value="US">United States</option>
+							</select>	
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+
+						<div class="formbox">
+							<label for="rDrop" class="labels">Province/State</label>
+							<select name="rDrop" id="rDrop" class="drops">
+								<option value="X">Select country first</option>
+							</select>
+							<div class="message"></div>
+							<div class="message2">&#x2714;</div>
+						</div>
+					</section>
+					<hr>
+
+					<section class="chunks">
+						<div class="row formbox">
+							<div class="col-md-6" id= "radio">
+								<label for="gender" class="labels" id="gender">Gender</label>
+								<br>
+								<input type="radio" name="gender" value="yes" class="options"><span>Male</span>
+								<br>
+								<input type="radio" name="gender" value="no" class="options"><span>Female</span>
+								<br>
+								<input type="radio" name="gender" value="maybe" class="options" checked><span>Other</span>
+								<div class="message" id="radioMessage"></div>
+								<div class="message2" id="radioMessage2">&#x2714;</div>
+							</div>
+
+							<div class="col-md-6 formbox" >
+								<label for="agree" class="labels" id="checkbox">Agree to the terms and conditions you definitely have not read?</label>
+								<br>
+								<input type="checkbox" id="agree" name="agree" class="options"><span>Obviously!</span>
+								<div class="message" id="checkMessage"></div>
+								<div class="message2" id="checkMessage2">&#x2714;</div>
+
+							</div>
+						</div>
+					</section>
+
+				
+					<div class="row">
+						<div class="formbox">
+							<input type="submit" value="Submit" name="btnSubmit" id="btnSubmit" />
+						</div>
+					</div>
+
+<p>* Optional Field</p>
+				</div>
+			</form>
+
+<!--simple footer-->
+			<div id="footer">
+				<p>HARD Version - All contents of Nature Stuff! are property of &#169;Hazelton Online</p>
+			</div>
+		</div>
+	</div>
+	
+	<!--trim, region, and basic script-->
+		<script src="scripts/trim.js"></script>
+		<script src="scripts/regions.js"></script>
+		<script src="scripts/script.js"></script>
+
+<!--web fonts-->
+		<script src="http://use.edgefonts.net/mate:n4,i4:all.js"></script>
+		<script src="http://use.edgefonts.net/chicle:n4:all;mate:n4,i4:all.js"></script>
+		
+		
+		<!--jQuery and Bootstrap links-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>
